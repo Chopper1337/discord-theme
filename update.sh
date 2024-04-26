@@ -11,3 +11,5 @@ printf "\n" >> theme.css
 cat midnight-discord/midnight.css >> theme.css
 printf "\n" >> theme.css
 cat amoled-cord/src/amoled-cord.css >> theme.css
+
+minify theme.css > theme.min.css
