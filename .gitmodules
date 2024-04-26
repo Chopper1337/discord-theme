@@ -1,0 +1,9 @@
+[submodule "HorizontalServerList"]
+	path = HorizontalServerList
+	url = https://github.com/DiscordStyles/HorizontalServerList
+[submodule "amoled-cord"]
+	path = amoled-cord
+	url = https://github.com/LuckFire/amoled-cord
+[submodule "midnight-discord"]
+	path = midnight-discord
+	url = https://github.com/refact0r/midnight-discord
