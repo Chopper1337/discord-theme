@@ -8,12 +8,12 @@ touch theme.css || exit
 (cd HorizontalServerList && npm i && npm run build)
 
 # Create theme.css
-cat HorizontalServerList/dist/dist/HorizontalServerList.css > theme.css
+cat HorizontalServerList/dist/dist/HorizontalServerList.css > theme.css || echo "Failed to add HorizontalServerList.css to theme.css"
 printf "\n" >> theme.css
-cat midnight-discord/midnight.css >> theme.css
+cat midnight-discord/midnight.css >> theme.css || echo "Failed to add midnight-discord/midnight.css to theme.css"
 printf "\n" >> theme.css
-cat amoled-cord/src/amoled-cord.css >> theme.css
+cat amoled-cord/src/amoled-cord.css >> theme.css || echo "Failed to add amoled-cord.css to theme.css"
 
-minify theme.css > theme.min.css
+minify theme.css > theme.min.css || echo "Failed to minify theme.css"
 
-cp theme.min.css ~/Git/ChopperNet/
+cp theme.min.css ~/Git/ChopperNet/ || echo "Failed to copy theme.min.css to ~/Git/ChopperNet/theme.min.css"
