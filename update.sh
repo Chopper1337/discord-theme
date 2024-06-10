@@ -15,5 +15,3 @@ printf "\n" >> theme.css
 cat amoled-cord/src/amoled-cord.css >> theme.css || echo "Failed to add amoled-cord.css to theme.css"
 
 minify theme.css > theme.min.css || echo "Failed to minify theme.css"
-
-cp theme.min.css ~/Git/ChopperNet/ || echo "Failed to copy theme.min.css to ~/Git/ChopperNet/theme.min.css"
