@@ -1,6 +1,6 @@
 #!/bin/bash
 
-git submodule update
+git submodule update --remote --merge
 
 touch theme.css || exit
 
