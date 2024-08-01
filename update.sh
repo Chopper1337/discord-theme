@@ -1,5 +1,12 @@
 #!/bin/bash
 
+deps=( git minify )
+
+for dep in ${deps[@]}
+do 
+  which $dep || exit
+done
+
 git submodule update --remote --merge
 
 touch theme.css || exit
