@@ -7,6 +7,9 @@ do
   which $dep || exit
 done
 
+# Only run the script from the directory of the repo
+cd $(cd "${0%/*}" && echo $PWD) || exit
+
 git submodule update --remote --merge
 
 touch theme.css || exit
