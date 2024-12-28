@@ -7,7 +7,7 @@ do
   which $dep || exit
 done
 
-REPO_PATH="$(cd "${0%/*}" && echo $PWD)"
+REPO_PATH=$(cd "${0%/*}" && echo $PWD)
 
 # Only run the script from the directory of the repo
 cd "$REPO_PATH" || exit
@@ -33,4 +33,4 @@ rm theme.css
 git commit -a -m "Update"
 
 echo "Please review and push the changes..."
-cd "$REPO_PATH" || exit
+cd "$REPO_PATH"
