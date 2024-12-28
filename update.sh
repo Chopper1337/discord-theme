@@ -7,8 +7,10 @@ do
   which $dep || exit
 done
 
+REPO_PATH="$(cd "${0%/*}" && echo $PWD)"
+
 # Only run the script from the directory of the repo
-cd $(cd "${0%/*}" && echo $PWD) || exit
+cd "$REPO_PATH" || exit
 
 git submodule update --remote --merge
 
@@ -27,3 +29,8 @@ cat amoled-cord/src/amoled-cord.css >> theme.css || echo "Failed to add amoled-c
 minify theme.css > theme.min.css || echo "Failed to minify theme.css"
 
 rm theme.css
+
+git commit -a -m "Update"
+
+echo "Please review and push the changes..."
+cd "$REPO_PATH" || exit
