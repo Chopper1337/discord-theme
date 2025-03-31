@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 deps=( git minify )
 
 for dep in ${deps[@]}
