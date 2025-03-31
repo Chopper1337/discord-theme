@@ -24,7 +24,7 @@ touch theme.css || exit
 # Create theme.css
 cat HorizontalServerList/dist/dist/HorizontalServerList.css > theme.css || echo "Failed to add HorizontalServerList.css to theme.css"
 printf "\n" >> theme.css
-cat midnight-discord/midnight.css >> theme.css || echo "Failed to add midnight-discord/midnight.css to theme.css"
+cat midnight-discord/build/midnight.css >> theme.css || echo "Failed to add midnight-discord/midnight.css to theme.css"
 printf "\n" >> theme.css
 cat amoled-cord/src/amoled-cord.css >> theme.css || echo "Failed to add amoled-cord.css to theme.css"
 
